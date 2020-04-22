@@ -1,0 +1,58 @@
+{
+  "name": "SpaceStrike",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "postinstall": "jetifier -r",
+    "podup": "cd ios && pod install && cd ..",
+    "android:bundle:release": "cd android && ./gradlew bundleRelease && cd ../",
+    "android:bundle:debug": "cd android && ./gradlew bundleDebug && cd ../",
+    "android:apk:release": "cd android && ./gradlew assembleRelease && cd ../",
+    "android:apk:debug": "cd android && ./gradlew assembleDebug && cd ../",
+    "bundle:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ && rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw"
+  },
+  "dependencies": {
+    "@types/matter-js": "^0.14.2",
+    "matter-js": "^0.14.2",
+    "oimo": "^1.0.9",
+    "react": "16.11.0",
+    "react-native": "0.62.2",
+    "react-native-game-engine": "^1.1.1",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-reanimated": "^1.8.0",
+    "rn-sprite-sheet": "^1.1.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^1.0.0",
+    "@types/jest": "^24.0.24",
+    "@types/react-native": "^0.62.0",
+    "@types/react-test-renderer": "16.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "prettier": "^2.0.4",
+    "react-test-renderer": "16.11.0",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

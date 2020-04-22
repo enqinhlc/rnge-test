@@ -1,0 +1,74 @@
+{
+    "fire": {
+        "id": 1,
+        "name": "Fire Storm",
+        "duration": 1000,
+        "distance": 100,
+        "attack": 10.0,
+        "cooldown": 3,
+        "damage": 1,
+        "effect": {
+            "animation": "fr",
+            "playerAnimation": null,
+            "color": "rgba(37,124,163,.85)",
+            "duration": 1000,
+            "times": 2,
+            "width": 50,
+            "height": 50
+        }
+    },
+    "ice": {
+        "id": 2,
+        "name": "Ice Storm",
+        "duration": 1000,
+        "distance": 100,
+        "attack": 10.0,
+        "cooldown": 3,
+        "damage": 1,
+        "effect": {
+            "animation": "gl",
+            "playerAnimation": null,
+            "color": "rgba(37,124,163,.85)",
+            "duration": 1000,
+            "times": 2,
+            "width": 32,
+            "height": 32
+        }
+    },
+    "posion": {
+        "id": 3,
+        "name": "Posion Storm",
+        "duration": 1000,
+        "distance": 1000,
+        "attack": 10.0,
+        "cooldown": 10,
+        "damage": 2,
+        "effect": {
+            "animation": "lr",
+            "playerAnimation": null,
+            "color": "rgba(218,112,214,.85)",
+            "duration": 1500,
+            "times": 10,
+            "width": 32,
+            "height": 32
+        }
+    },
+    "playerSkill": {
+        "id": 4,
+        "name": "Blade",
+        "duration": 2000,
+        "distance": 10,
+        "attack": 10.0,
+        "cooldown": 10,
+        "damage": 2,
+        "effect": {
+            "animation": null,
+            "playerAnimation": "skill",
+            "color": "rgba(218,112,214,.85)",
+            "duration": 2000,
+            "times": 10,
+            "width": 32,
+            "height": 32
+        }
+    }
+}
