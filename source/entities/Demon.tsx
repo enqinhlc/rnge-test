@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, ImageStyle } from 'react-native';
 import { TileRender } from '@source/Helper';
+import Camera from '@source/classes/Camera';
 
 interface Style {
   container: ImageStyle;
@@ -11,10 +12,11 @@ const styles = StyleSheet.create<Style>({
   },
 });
 
-const Player = ({ body: { position, size } }) => {
+const Demon = ({ body: { position, size } }) => {
+  const offset = Camera.getOffset();
   const customStyle = {
-    left: position.x,
-    top: position.y,
+    left: position.x - offset.x,
+    top: position.y - offset.y,
     width: size.width,
     height: size.height,
   };
@@ -27,4 +29,4 @@ const Player = ({ body: { position, size } }) => {
   );
 };
 
-export default Player;
+export default Demon;

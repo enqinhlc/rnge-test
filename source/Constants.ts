@@ -3,7 +3,8 @@ import { Dimensions } from 'react-native';
 export const MAX_WIDTH: number = Dimensions.get('screen').width;
 export const MAX_HEIGHT: number = Dimensions.get('screen').height;
 export const ENEMY_SIZE: number = 32;
-export const MONSTER_SIZE: number = 32;
+export const TILE_SIZE: number = 64;
+export const MONSTER_SIZE: number = 48;
 export const PLAYER_SIZE: number = 32;
 export const PLAYER_MAIN_AXIS: number = 50;
 export const PLAYER_SAFE_DISTANCE: number = 300;
@@ -37,6 +38,7 @@ export const EVENTS = {
   USE_SKILL: 'USE_SKILL',
   USED_SKILL_FOR_CHAT: 'USED_SKILL_FOR_CHAT',
   PLAYER_COORDS: 'PLAYER_COORDS',
+  PLAYER_MOVE: 'PLAYER_MOVE',
 };
 
 //ANIMATIONS FOR ENTITIES
@@ -65,8 +67,9 @@ export const ANIMATIONS = {
 
 //TAGS FOR Entities
 export const TAGS = {
-  GROUND: 'GROUND',
   PLAYER: 'PLAYER',
+  CAMERA: 'CAMERA',
+  GROUND: 'GROUND',
   SKILL_EFFECT: 'SKILL_EFFECT',
   DROPPED_ITEM: 'DROPPED_ITEM', // item dropped from mob, ready to take
   MONSTER: 'MONSTER',

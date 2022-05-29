@@ -4,6 +4,7 @@ import {
   MAX_WIDTH,
   ENEMY_SIZE,
 } from './Constants';
+import tiles from '../assets/tiles';
 
 export const randomRange = (min: number, max: number): number => {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -68,4 +69,19 @@ export const checkDistanceBetweenPoints = (bodyA, bodyB) => {
 
 export const calculateSkillDamage = ({ damage, attack }) => {
   return damage * attack;
+};
+
+export const TileRender = (tileId: number) => {
+  switch (tileId) {
+    case 1:
+      return tiles.knight;
+    case 2:
+      return tiles.grass2;
+    case 3:
+      return tiles.grass3;
+    case 8:
+      return tiles.hero;
+    case 9:
+      return tiles.npc;
+  }
 };
